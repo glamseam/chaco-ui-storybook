@@ -1,0 +1,6 @@
+@use '@glamseam/sparrow/bases/color-palette';
+@use '@glamseam/sparrow/bases/theme/variables'
+    with (
+        $surface-light: color-palette.create-ink-surface-variant('light', color-palette.$surface-light-variant-base, 96),
+        $surface-light-variant: color-palette.$surface-light-base
+    );

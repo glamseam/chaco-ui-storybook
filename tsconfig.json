@@ -1,0 +1,41 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "@/*": ["stories/*"],
+            "@assets/*": ["stories/assets/*"]
+        },
+        "declaration": true,
+        "declarationDir": "dist/types",
+        "allowJs": true,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "jsx": "preserve",
+        "jsxFactory": "h",
+        "lib": [
+            "esnext",
+            "dom",
+            "dom.iterable"
+        ],
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "noErrorTruncation": true,
+        "removeComments": true,
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "strict": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "target": "es2017"
+    },
+    "include": [
+        "**/*.ts",
+        "**/*.d.ts",
+        "**/*.tsx",
+        "**/*.vue",
+        ".storybook/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

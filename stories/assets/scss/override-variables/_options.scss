@@ -1,0 +1,17 @@
+@use '@glamseam/sparrow/options'
+    with(
+        $enable-dark-theme: true,
+        $enable-ink-dark-brand-color: false,
+        $enable-surface-dark-brand-color: false,
+        $enable-surface-light-brand-color: false,
+        $enable-ripple-effect: true,
+        $enable-alert-component: true,
+        $enable-banner-component: true,
+        $enable-dialog-component: true,
+        $enable-dt-picker-component: true,
+        $enable-label-component: true,
+        $enable-searchbox-component: true,
+        $enable-table-component: true,
+        $enable-form-chip-component: true,
+        $enable-form-image-select-component: true,
+    );

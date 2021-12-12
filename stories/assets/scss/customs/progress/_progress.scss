@@ -1,0 +1,4 @@
+@use '@glamseam/sparrow/components/progress';
+
+@include progress.output-bar-fill('main');
+@include progress.output-circle-fill('main');

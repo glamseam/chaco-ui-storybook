@@ -1,0 +1,14 @@
+{
+    "projects": {
+        "default": "chaco-ce3e0"
+    },
+    "targets": {
+        "chaco-ce3e0": {
+            "hosting": {
+                "chaco-ui": [
+                    "chaco-ui"
+                ]
+            }
+        }
+    }
+}
