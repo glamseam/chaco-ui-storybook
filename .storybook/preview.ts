@@ -1,23 +1,25 @@
 import type { Parameters } from '@storybook/addons'
-import { MINIMAL_VIEWPORTS} from '@storybook/addon-viewport'
+import { MINIMAL_VIEWPORTS } from '@storybook/addon-viewport'
 import type { ToolbarArgType } from '@storybook/addon-toolbars/dist/ts3.9/types'
 import { app } from '@storybook/vue3'
 import type { ArgTypes, Story, StoryContext } from '@storybook/vue3'
 
 import pluginChacoUI from '@glamseam/chaco-ui'
+import type { PluginInstallOptionsI } from '@glamseam/chaco-ui/dist/type'
+
 import { PAYJP_PUBLIC_KEY } from '../env'
 import StoriesWrapper from '../stories/decorators/StoriesWrapper.vue'
 import SvgSprite from '../stories/decorators/SvgSprite.vue'
 
 import '../stories/assets/scss/style.scss'
 
-app.use(pluginChacoUI, {
+const pluginChacoUIOptions: PluginInstallOptionsI = {
     imgixBaseUrl: 'https://chaco.imgix.net',
-    isRipple: true,
     payjpPublicKey: PAYJP_PUBLIC_KEY,
-    svgIconSymbolIdPrefix: 'svg-icon-',
-    isEnabledDarkTheme: true
-})
+    svgIconSymbolIdPrefix: 'svg-icon-'
+}
+
+app.use(pluginChacoUI, pluginChacoUIOptions)
 
 const customViewports = {
     ipad: {
