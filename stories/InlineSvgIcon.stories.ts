@@ -24,6 +24,6 @@ export const Default: StoryObj<Comp> = {
         setup() {
             return { args }
         },
-        template: '<InlineSvg v-bind="args">'
+        template: '<InlineSvg v-bind="args" />'
     })
 }
