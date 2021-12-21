@@ -68,7 +68,6 @@ export const Default: StoryObj<Comp> = {
                                 <AcdInjectedOpenClose>
                                     <template #default="acdSlotProps">
                                         <ButtonIcon
-                                            v-ripple
                                             :class-name="actionButtonSlotProps.actionButtonClass"
                                             :shape="acdSlotProps.iconShape"
                                             size="sm"
@@ -90,7 +89,6 @@ export const Default: StoryObj<Comp> = {
                         <template v-if="args.isActionBar">
                             <div class="card-action-bar">
                                 <ButtonText
-                                    v-ripple
                                     class-name="button-primary-transparent"
                                     text="accept"
                                 />
@@ -100,7 +98,6 @@ export const Default: StoryObj<Comp> = {
                                     size="auto"
                                 />
                                 <ButtonIcon
-                                    v-ripple
                                     class-name="card-icon-button"
                                     shape="share"
                                     size="sm"
@@ -111,7 +108,6 @@ export const Default: StoryObj<Comp> = {
                                     size="25"
                                 />
                                 <ButtonIcon
-                                    v-ripple
                                     class-name="card-icon-button"
                                     shape="ellipsis-v"
                                     size="sm"
