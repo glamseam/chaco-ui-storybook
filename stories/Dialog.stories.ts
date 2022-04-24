@@ -20,7 +20,6 @@ export default meta
 export const Default: StoryObj<Comp> = {
     name: 'Dialog',
     args: {
-        belowWrapperElementId: '',
         classNameSuffix: 'main',
         isActionButtonDanger: false,
         isDisabledActionButton: false,

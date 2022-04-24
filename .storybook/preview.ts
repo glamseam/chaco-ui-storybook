@@ -13,13 +13,17 @@ import SvgSprite from '../stories/decorators/SvgSprite.vue'
 
 import '../stories/assets/scss/style.scss'
 
+// chaco-ui main
 const pluginChacoUIOptions: PluginInstallOptionsI = {
     imgixBaseUrl: 'https://chaco.imgix.net',
     payjpPublicKey: PAYJP_PUBLIC_KEY,
     svgIconSymbolIdPrefix: 'svg-icon-'
 }
-
-app.use(pluginChacoUI, pluginChacoUIOptions)
+app.use(
+    pluginChacoUI,
+    {},
+    pluginChacoUIOptions
+)
 
 const customViewports = {
     ipad: {
@@ -131,7 +135,7 @@ export const decorators = [
                         <story />
                     </StoriesWrapper>
                 </div>
-                <div id="teleportDialog" />
+                <div id="teleportTopLayer" />
             `
         }
     }

@@ -63,7 +63,7 @@ export const Seen: StoryObj<Comp> = {
             return { args }
         },
         template: `
-            <div class="d-flex">
+            <div style="display: flex;">
                 <Avatar v-bind="args" :index="0" />
                 <Avatar v-bind="args" :index="1" />
                 <Avatar v-bind="args" :index="2" />

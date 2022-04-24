@@ -21,7 +21,6 @@ export default meta
 export const Default: StoryObj<Comp> = {
     name: 'Default',
     args: {
-        belowWrapperElementId: '',
         classNameSuffix: 'main',
         classNameSuffixForDialog: 'main',
         errorText: '',

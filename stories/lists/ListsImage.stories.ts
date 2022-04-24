@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import ListsImage from '@glamseam/chaco-ui/dist/components/lists/ListsImage.vue'
 import Imgix from '@glamseam/chaco-ui/dist/components/Imgix.vue'
 import ListsImageActionButton from '@glamseam/chaco-ui/dist/components/lists/ListsImageActionButton.vue'
-import ListsImageContainer from '@glamseam/chaco-ui/dist/components/lists/ListsImageContainer.vue'
+import RepeatGrid from '@glamseam/chaco-ui/dist/components/RepeatGrid.vue'
 import { formUtil } from '@glamseam/chaco-ui/dist/utils/form'
 
 type Comp = InstanceType<typeof ListsImage>
@@ -30,13 +30,14 @@ export const Default: StoryObj<Comp> = {
     },
     decorators: [
         () => ({
-            components: { ListsImageContainer },
+            components: { RepeatGrid },
             template: `
-                <ul>
-                    <ListsImageContainer>
-                        <story />
-                    </ListsImageContainer>
-                </ul>
+                <RepeatGrid
+                    gap="var(--grid-image-gap)"
+                    item-min-width="112px"
+                >
+                    <story />
+                </RepeatGrid>
             `
         })
     ],
@@ -132,9 +133,6 @@ export const InputCheckbox: StoryObj<Comp> = {
                     />
                 </template>
             </ListsImage>
-            <p>
-                binding value: {{ checkedRef }}
-            </p>
         `
     })
 }
@@ -180,9 +178,6 @@ export const InputRadio: StoryObj<Comp> = {
                     />
                 </template>
             </ListsImage>
-            <p>
-                binding value: {{ checkedRef }}
-            </p>
         `
     })
 }
