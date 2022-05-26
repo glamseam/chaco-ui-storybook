@@ -10,7 +10,7 @@ const meta: Meta<Comp> = {
     argTypes: {
         position: {
             control: { type: 'inline-radio' },
-            options: ['center', 'left', 'right']
+            options: ['left', 'right']
         }
     }
 }
@@ -20,10 +20,9 @@ export const Default: StoryObj<Comp> = {
     name: 'Snackbar',
     args: {
         // actionButton: {
-        //     fn: () => void
+        //     fn: click,
         //     text: 'string'
         // },
-        classNameSuffix: 'main',
         isShow: false,
         msg: 'Show Snackbar',
         position: 'right'

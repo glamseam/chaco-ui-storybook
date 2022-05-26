@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import { ref } from 'vue'
-import FormSelect from '@glamseam/chaco-ui/dist/components/forms/FormSelect.vue'
+import FormFieldSelect from '@glamseam/chaco-ui/dist/components/forms/FormFieldSelect.vue'
 
-type Comp = InstanceType<typeof FormSelect>
+type Comp = InstanceType<typeof FormFieldSelect>
 
 const meta: Meta<Comp> = {
     title: 'Form/Select',
-    component: FormSelect
+    component: FormFieldSelect
 }
 
 const data = [
@@ -21,16 +21,16 @@ export default meta
 export const Default: StoryObj<Comp> = {
     name: 'Select',
     args: {
-        classNameSuffix: 'main',
+        classNameSuffix: 'default',
         errorText: '',
-        iconLeft: '',
         isDisabled: false,
         isRequired: false,
         label: 'フロントエンド',
+        leftIcon: '',
         supportingText: ''
     },
     render: (args) => ({
-        components: { FormSelect },
+        components: { FormFieldSelect },
         setup() {
             const valueRef = ref('0')
 
@@ -41,7 +41,7 @@ export const Default: StoryObj<Comp> = {
             }
         },
         template: `
-            <FormSelect
+            <FormFieldSelect
                 v-bind="args"
                 :value="valueRef"
                 @update:value="(v) => valueRef = v"
@@ -56,7 +56,7 @@ export const Default: StoryObj<Comp> = {
                 >
                     {{ option.primaryText }}
                 </option>
-            </FormSelect>
+            </FormFieldSelect>
             <p>
                 binding value: {{ valueRef }}
             </p>

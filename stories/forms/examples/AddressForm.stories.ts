@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import ExampleAddressForm from '../../examples/AddressForm.vue'
+import ExampleAddressForm from '@/_vue/AddressForm.vue'
 
 type Comp = InstanceType<typeof ExampleAddressForm>
 

@@ -9,7 +9,7 @@ const meta: Meta<Comp> = {
     argTypes: {
         size: {
             control: { type: 'inline-radio' },
-            options: ['xs', 'sm', 'md', 'bottom-nav']
+            options: ['sm', 'md', 'lg', 'xl']
         }
     }
 }
@@ -18,11 +18,17 @@ export default meta
 export const Default: StoryObj<Comp> = {
     name: 'Icon',
     args: {
-        className: 'card-icon-button',
+        ariaLabel: '',
+        className: '',
+        colorType: 'neutral',
+        idName: '',
+        styleType: 'ghost',
+        imgSrc: '',
         isActive: false,
         isDisabled: false,
-        shape: 'pen',
-        size: 'md'
+        text: '',
+        size: 'lg',
+        icon: 'heart'
     },
     render: (args) => ({
         components: { ButtonIcon },

@@ -7,18 +7,22 @@ const meta: Meta<Comp> = {
     title: 'Button/Text',
     component: ButtonText,
     argTypes: {
-        className: {
+        colorType: {
             control: { type: 'radio' },
             options: [
-                'button-primary',
-                'button-secondary',
-                'button-tertiary',
-                'button-success',
-                'button-caution',
-                'button-danger'
+                'primary',
+                'secondary',
+                'neutral'
             ]
         },
-        height: {
+        styleType: {
+            control: { type: 'radio' },
+            options: [
+                'filled',
+                'ghost'
+            ]
+        },
+        size: {
             control: { type: 'inline-radio' },
             options: ['sm', 'md', 'lg', 'xl']
         }
@@ -29,17 +33,20 @@ export default meta
 export const Default: StoryObj<Comp> = {
     name: 'Text',
     args: {
-        className: 'button-primary',
-        height: 'md',
+        ariaLabel: '',
+        className: '',
+        colorType: 'primary',
+        idName: '',
+        styleType: 'filled',
+        imgSrc: '',
         isActive: false,
         isDisabled: false,
         isFullWidth: false,
         isOutlined: false,
-        isRaised: false,
-        isRoundedPill: false,
-        isSubmit: false,
-        leftIcon: 'cheeseburger',
-        text: 'Fill Button'
+        leftIcon: '',
+        rightIcon: '',
+        size: 'md',
+        text: 'Button'
     },
     render: (args) => ({
         components: { ButtonText },

@@ -10,13 +10,7 @@ const meta: Meta<Comp> = {
         colorType: {
             control: { type: 'radio' },
             options: [
-                'primary',
-                'secondary',
-                'tertiary',
-                'quaternary',
-                'quinary',
-                'success',
-                'caution',
+                'default',
                 'danger'
             ]
         }
@@ -27,9 +21,8 @@ export default meta
 export const Default: StoryObj<Comp> = {
     name: 'Alert',
     args: {
-        classNameSuffix: 'main',
-        colorType: 'primary',
-        iconShape: '',
+        colorType: 'default',
+        icon: '',
         title: 'タイトル'
     },
     render: (args) => ({

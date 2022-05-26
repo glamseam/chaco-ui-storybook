@@ -1,18 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import FormTitle from '@glamseam/chaco-ui/dist/components/forms/FormTitle.vue'
+import FormCheckboxRadioTitle from '@glamseam/chaco-ui/dist/components/forms/FormCheckboxRadioTitle.vue'
 
-type Comp = InstanceType<typeof FormTitle>
+type Comp = InstanceType<typeof FormCheckboxRadioTitle>
 
 const meta: Meta<Comp> = {
     title: 'Form/Title',
-    component: FormTitle
+    component: FormCheckboxRadioTitle
 }
 
 export default meta
 export const Default: StoryObj<Comp> = {
     name: 'Title',
     args: {
-        classNameSuffix: 'main',
+        classNameSuffix: 'default',
         errorText: '',
         icon: '',
         isRequired: false,
@@ -20,10 +20,10 @@ export const Default: StoryObj<Comp> = {
         secondaryText: `checkboxやradioを使う時のタイトルとして使用します。`
     },
     render: (args) => ({
-        components: { FormTitle },
+        components: { FormCheckboxRadioTitle },
         setup() {
             return { args }
         },
-        template: '<FormTitle v-bind="args" />'
+        template: '<FormCheckboxRadioTitle v-bind="args" />'
     })
 }

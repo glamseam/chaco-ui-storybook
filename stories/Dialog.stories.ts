@@ -20,21 +20,17 @@ export default meta
 export const Default: StoryObj<Comp> = {
     name: 'Dialog',
     args: {
-        classNameSuffix: 'main',
         isActionButtonDanger: false,
         isDisabledActionButton: false,
         isDisabledCloseButton: false,
         isOutsideClose: true,
         isForceScroll: false,
         phrases: {
-            close: 'ok',
+            close: 'OK',
             action: ''
         },
         title: 'ダイアログ',
-        widthName: 'md',
-        // @ts-ignore
-        slotDefault: `木曾路はすべて山の中である。あるところは岨づたいに行く崖の道であり、あるところは数十間の深さに臨む木曾川の岸であり、あるところは山の尾をめぐる谷の入り口である。一筋の街道はこの深い森林地帯を貫いていた。<br>
-東ざかいの桜沢から、西の十曲峠まで、木曾十一宿はこの街道に添うて、二十二里余にわたる長い谿谷の間に散在していた。`
+        widthName: 'md'
     },
     render: (args) => ({
         components: {
@@ -59,15 +55,15 @@ export const Default: StoryObj<Comp> = {
             >
                 <template #open="slotProps">
                     <ButtonText
-                        class-name="button-primary-transparent"
-                        :is-outlined="true"
-                        text="open dialog"
+                        color-type="primary"
+                        img-src="https://avatars.githubusercontent.com/u/25496839?v=4"
+                        style-type="filled"
+                        text="Open Dialog"
                         @click="slotProps.open"
                     />
                 </template>
-                <template v-if="${'slotDefault' in args}">
-                    ${args.slotDefault}
-                </template>
+                木曾路はすべて山の中である。あるところは岨づたいに行く崖の道であり、あるところは数十間の深さに臨む木曾川の岸であり、あるところは山の尾をめぐる谷の入り口である。一筋の街道はこの深い森林地帯を貫いていた。<br>
+                東ざかいの桜沢から、西の十曲峠まで、木曾十一宿はこの街道に添うて、二十二里余にわたる長い谿谷の間に散在していた。
             </Dialog>
         `
     })

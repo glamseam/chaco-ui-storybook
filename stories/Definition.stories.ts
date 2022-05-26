@@ -22,15 +22,14 @@ export default meta
 export const Default: StoryObj<Comp> = {
     name: 'Definition',
     args: {
-        dtTypoClassName: 'typo-caption',
-        dtColorClassName: 'ink-on-surface-low',
+        dtTypoClassName: 'typo-title-md',
         dtMarginBottomSize: '0',
         isColumn: false,
         isDtBold: false,
         marginBottomSize: '125',
         title: 'タイトル',
         // @ts-ignore
-        slotDefault: `<p class="typo-body1 ink-on-surface-high">
+        slotDefault: `<p class="typo-body-md theme-on-surface-variant">
     ここにはスロット
 </p>`
     },

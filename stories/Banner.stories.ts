@@ -14,7 +14,6 @@ export default meta
 export const Default: StoryObj<Comp> = {
     name: 'Banner',
     args: {
-        classNameSuffix: 'main',
         // @ts-ignore
         slotDefault: `<p>このサイトでは、トラフィックを分析するために、ユーザーの好みを記憶し、エクスペリエンスを最適化するためにCookieを使用しています。<br>
 この使用を承諾する場合は「OK」を押してください。</p>`
@@ -29,7 +28,7 @@ export const Default: StoryObj<Comp> = {
             return { args }
         },
         template: `
-            <Banner :class-name-suffix="${args.classNameSuffix}">
+            <Banner>
                 <template #default>
                     ${args.slotDefault}
                 </template>
@@ -39,7 +38,10 @@ export const Default: StoryObj<Comp> = {
                             href: 'https://policies.google.com/technologies/partner-sites?hl=ja',
                             isNewTab: true
                         }"
-                        class-name="banner-button-color"
+                        color-type="neutral"
+                        style-type="ghost"
+                        :is-outlined="true"
+                        size="sm"
                         text="詳しく"
                     />
                     <Spacer
@@ -48,7 +50,9 @@ export const Default: StoryObj<Comp> = {
                         size="auto"
                     />
                     <ButtonText
-                        class-name="banner-button-ink"
+                        color-type="neutral"
+                        style-type="ghost"
+                        size="sm"
                         text="拒否"
                     />
                     <Spacer
@@ -57,7 +61,9 @@ export const Default: StoryObj<Comp> = {
                         size="50"
                     />
                     <ButtonText
-                        class-name="banner-button-color"
+                        color-type="secondary"
+                        style-type="filled"
+                        size="sm"
                         text="OK"
                     />
                 </template>

@@ -1,0 +1,19 @@
+@use '@glamseam/sparrow/components/alert';
+@use '@glamseam/sparrow/components/banner';
+@use '@glamseam/sparrow/components/bottom-bar';
+@use '@glamseam/sparrow/components/button';
+@use '@glamseam/sparrow/components/card';
+@use '@glamseam/sparrow/components/dt-picker';
+@use '@glamseam/sparrow/components/dialog';
+@use '@glamseam/sparrow/components/floating-menu';
+@use '@glamseam/sparrow/components/images-list';
+@use '@glamseam/sparrow/components/loading-placeholder';
+@use '@glamseam/sparrow/components/loading-spinner';
+@use '@glamseam/sparrow/components/progress';
+@use '@glamseam/sparrow/components/ripple';
+@use '@glamseam/sparrow/components/searchbox';
+@use '@glamseam/sparrow/components/snackbar';
+@use '@glamseam/sparrow/components/top-app-bar';
+
+@include dt-picker.output('default');
+@include searchbox.output('default');

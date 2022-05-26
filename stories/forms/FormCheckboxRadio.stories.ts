@@ -22,7 +22,7 @@ export default meta
 export const Default: StoryObj<Comp> = {
     name: 'Radio',
     args: {
-        classNameSuffix: 'main',
+        classNameSuffix: 'default',
         inputName: 'checkbox-radio',
         isDisabled: false
     },
@@ -97,7 +97,7 @@ export const Checkbox: StoryObj<Comp> = {
 export const CheckboxBool: StoryObj<Comp> = {
     name: 'CheckboxBool',
     args: {
-        classNameSuffix: 'main',
+        classNameSuffix: 'default',
         inputName: 'checkbox-bool',
         isDisabled: false,
         option: {

@@ -7,20 +7,16 @@ const meta: Meta<Comp> = {
     title: 'Button/Fab',
     component: ButtonFab,
     argTypes: {
-        className: {
+        colorType: {
             control: { type: 'radio' },
             options: [
-                'fab-button-primary',
-                'fab-button-secondary',
-                'fab-button-tertiary',
-                'fab-button-success',
-                'fab-button-caution',
-                'fab-button-danger'
+                'primary',
+                'secondary'
             ]
         },
         size: {
             control: { type: 'inline-radio' },
-            options: ['sm', 'md']
+            options: ['fab-sm', 'fab-md']
         }
     }
 }
@@ -29,12 +25,15 @@ export default meta
 export const Default: StoryObj<Comp> = {
     name: 'Fab',
     args: {
-        className: 'fab-button-primary',
-        isActive: false,
-        isDisabled: false,
-        isRaised: false,
-        shape: 'plus',
-        size: 'md'
+        ariaLabel: '',
+        className: '',
+        colorType: 'secondary',
+        idName: '',
+        styleType: 'filled',
+        text: 'Extended',
+        size: 'fab-md',
+        icon: 'add',
+        isExtended: false
     },
     render: (args) => ({
         components: { ButtonFab },

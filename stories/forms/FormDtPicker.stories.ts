@@ -21,8 +21,8 @@ export default meta
 export const Default: StoryObj<Comp> = {
     name: 'Default',
     args: {
-        classNameSuffix: 'main',
-        classNameSuffixForDialog: 'main',
+        classNameSuffix: 'default',
+        classNameSuffixForDialog: 'default',
         errorText: '',
         isDisabled: false,
         isRequired: false,
@@ -108,7 +108,7 @@ export const Separate: StoryObj<Comp> = {
                         picker-type="date"
                         @update-value="(v) => valueRef = v"
                     />
-                    <div class="mb-200" />
+                    <div class="form-spacer" />
                     <FormDtPicker
                         v-bind="args"
                         :format="{ hour: '2-digit', minute: '2-digit' }"

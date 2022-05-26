@@ -1,16 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import { ref } from 'vue'
-import ListsImage from '@glamseam/chaco-ui/dist/components/lists/ListsImage.vue'
+import FormImageSelect from '@glamseam/chaco-ui/dist/components/forms/FormImageSelect.vue'
+import ImagesListSquare from '@glamseam/chaco-ui/dist/components/images-list/Square.vue'
+import ImagesListActionButton from '@glamseam/chaco-ui/dist/components/images-list/ActionButton.vue'
 import Imgix from '@glamseam/chaco-ui/dist/components/Imgix.vue'
-import ListsImageActionButton from '@glamseam/chaco-ui/dist/components/lists/ListsImageActionButton.vue'
 import RepeatGrid from '@glamseam/chaco-ui/dist/components/RepeatGrid.vue'
 import { formUtil } from '@glamseam/chaco-ui/dist/utils/form'
 
-type Comp = InstanceType<typeof ListsImage>
+type Comp = InstanceType<typeof ImagesListSquare>
 
 const meta: Meta<Comp> = {
-    title: 'Lists/Image',
-    component: ListsImage
+    title: 'Images/List',
+    component: ImagesListSquare
 }
 
 const images = [
@@ -25,15 +26,12 @@ const images = [
 export default meta
 export const Default: StoryObj<Comp> = {
     name: 'Image',
-    args: {
-        classNameSuffix: 'main'
-    },
     decorators: [
         () => ({
             components: { RepeatGrid },
             template: `
                 <RepeatGrid
-                    gap="var(--grid-image-gap)"
+                    gap="var(--grid-gap-image)"
                     item-min-width="112px"
                 >
                     <story />
@@ -43,8 +41,8 @@ export const Default: StoryObj<Comp> = {
     ],
     render: (args) => ({
         components: {
-            ListsImage,
-            ListsImageActionButton,
+            ImagesListSquare,
+            ImagesListActionButton,
             Imgix
         },
         setup() {
@@ -59,44 +57,38 @@ export const Default: StoryObj<Comp> = {
             }
         },
         template: `
-            <ListsImage
+            <ImagesListSquare
                 v-for="image in images"
                 :key="image.id"
-                v-bind="args"
                 :image="image"
             >
-                <template #default="listsImageSlotProps">
+                <template #default="ImagesListSquareSlotProps">
                     <Imgix
                         :aspect-ratio="{
                             horizontal: 1,
                             vertical: 1
                         }"
-                        :class-name="listsImageSlotProps.imageClassName"
+                        :class-name="ImagesListSquareSlotProps.imageClassName"
                         :is-crop="true"
-                        :img-src="listsImageSlotProps.imageUrl"
+                        :img-src="ImagesListSquareSlotProps.imageUrl"
                         :width="84"
                     />
                 </template>
-                <template #actionButton>
-                    <ListsImageActionButton @click="handleClick" />
+                <template #action>
+                    <ImagesListActionButton @click="handleClick" />
                 </template>
-            </ListsImage>
+            </ImagesListSquare>
         `
     })
 }
 
 export const InputCheckbox: StoryObj<Comp> = {
     name: 'InputCheckbox',
-    args: {
-        ...Default.args,
-        checkedValue: undefined,
-        inputName: 'listsImage',
-        isDisabled: false
-    },
     decorators: Default.decorators,
     render: (args) => ({
         components: {
-            ListsImage,
+            FormImageSelect,
+            ImagesListSquare,
             Imgix
         },
         setup() {
@@ -111,39 +103,43 @@ export const InputCheckbox: StoryObj<Comp> = {
             }
         },
         template: `
-            <ListsImage
+            <ImagesListSquare
                 v-for="image in images"
                 :key="image.id"
-                v-bind="args"
                 :image="image"
-                :checkedValue="checkedRef"
-                :isSelectedMode="true"
-                @update-value="updateCheckboxValues"
             >
-                <template #default="listsImageSlotProps">
+                <template #default="ImagesListSquareSlotProps">
                     <Imgix
                         :aspect-ratio="{
                             horizontal: 1,
                             vertical: 1
                         }"
-                        :class-name="listsImageSlotProps.imageClassName"
+                        :class-name="ImagesListSquareSlotProps.imageClassName"
                         :is-crop="true"
-                        :img-src="listsImageSlotProps.imageUrl"
+                        :img-src="ImagesListSquareSlotProps.imageUrl"
                         :width="84"
                     />
                 </template>
-            </ListsImage>
+                <template #action>
+                    <FormImageSelect
+                        v-bind="args"
+                        :image="image"
+                        :checkedValue="checkedRef"
+                        @update-value="updateCheckboxValues"
+                    />
+                </template>
+            </ImagesListSquare>
         `
     })
 }
 
 export const InputRadio: StoryObj<Comp> = {
     name: 'InputRadio',
-    args: InputCheckbox.args,
     decorators: Default.decorators,
     render: (args) => ({
         components: {
-            ListsImage,
+            FormImageSelect,
+            ImagesListSquare,
             Imgix
         },
         setup() {
@@ -156,28 +152,32 @@ export const InputRadio: StoryObj<Comp> = {
             }
         },
         template: `
-            <ListsImage
+            <ImagesListSquare
                 v-for="image in images"
                 :key="image.id"
-                v-bind="args"
                 :image="image"
-                :checkedValue="checkedRef"
-                :isSelectedMode="true"
-                @update-value="(payload) => checkedRef = payload.value"
             >
-                <template #default="listsImageSlotProps">
+                <template #default="ImagesListSquareSlotProps">
                     <Imgix
                         :aspect-ratio="{
                             horizontal: 1,
                             vertical: 1
                         }"
-                        :class-name="listsImageSlotProps.imageClassName"
+                        :class-name="ImagesListSquareSlotProps.imageClassName"
                         :is-crop="true"
-                        :img-src="listsImageSlotProps.imageUrl"
+                        :img-src="ImagesListSquareSlotProps.imageUrl"
                         :width="84"
                     />
                 </template>
-            </ListsImage>
+                <template #action>
+                    <FormImageSelect
+                        v-bind="args"
+                        :image="image"
+                        :checkedValue="checkedRef"
+                        @update-value="(payload) => checkedRef = payload.value"
+                    />
+                </template>
+            </ImagesListSquare>
         `
     })
 }

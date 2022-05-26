@@ -1,3 +1,4 @@
-// override-variables is already imported by sass-loader
 @use '@glamseam/sparrow';
-@use './customs';
+@use '@glamseam/sparrow/design-token/css-variables';
+@use './sparrow/component';
+@use './sparrow/form';

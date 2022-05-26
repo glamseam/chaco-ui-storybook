@@ -14,27 +14,15 @@ const meta: Meta<Comp> = {
         typoClassName: {
             control: { type: 'radio' },
             options: [
-                'typo-h1',
-                'typo-h2',
-                'typo-h3',
-                'typo-h4',
-                'typo-h5',
-                'typo-h6',
-                'typo-subtitle1',
-                'typo-subtitle2',
-                'typo-caption',
-                'typo-overline'
-            ]
-        },
-        weight: {
-            control: { type: 'radio' },
-            options: [
-                'thin',
-                'light',
-                'regular',
-                'medium',
-                'bold',
-                'black'
+                'typo-display-lg',
+                'typo-display-md',
+                'typo-display-sm',
+                'typo-headline-lg',
+                'typo-headline-md',
+                'typo-headline-sm',
+                'typo-title-lg',
+                'typo-title-md',
+                'typo-title-sm'
             ]
         }
     }
@@ -44,9 +32,9 @@ export default meta
 export const Default: StoryObj<Comp> = {
     name: 'Heading',
     args: {
-        fillClassName: 'ink-on-surface-high',
+        fillClassName: '',
         level: 1,
-        typoClassName: 'typo-h1',
+        typoClassName: 'typo-headline-lg',
         weight: 'regular',
         // @ts-ignore
         slotDefault: `タイトル`

@@ -15,7 +15,7 @@ import * as CardStories from '../Card.stories'
 type Comp = InstanceType<typeof Card>
 
 const meta: Meta<Comp> = {
-    title: 'Cards/Examples/03',
+    title: 'Cards/Examples/Accordion',
     component: Card,
     argTypes: {
         // @ts-ignore
@@ -27,7 +27,7 @@ const meta: Meta<Comp> = {
 
 export default meta
 export const Default: StoryObj<Comp> = {
-    name: '03',
+    name: 'Accordion',
     args: CardStories.Default.args,
     render: (args) => ({
         components: {
@@ -61,36 +61,39 @@ export const Default: StoryObj<Comp> = {
                         />
                         <CardHeader
                             img-src="https://avatars.githubusercontent.com/u/25496839"
-                            primary-text="タイトル01"
-                            secondary-text="セカンダリー"
+                            title="タイトル01"
+                            supporting-text="サポートテキスト"
                         >
-                            <template #actionButton="actionButtonSlotProps">
+                            <template #actionButton>
                                 <AcdInjectedOpenClose>
                                     <template #default="acdSlotProps">
                                         <ButtonIcon
-                                            :class-name="actionButtonSlotProps.actionButtonClass"
-                                            :shape="acdSlotProps.iconShape"
-                                            size="sm"
+                                            color-type="neutral"
+                                            style-type="ghost"
+                                            :icon="acdSlotProps.iconShape"
+                                            size="lg"
                                             @click="acdSlotProps.openClose"
                                         />
                                     </template>
                                 </AcdInjectedOpenClose>
                             </template>
                         </CardHeader>
-                        <AcdInjectedBody>
-                            <div class="card-body">
-                                <hr class="card-body-hr">
-                                <p class="typo-body2 typo-pre-line-break-word typo-line-clamp-3 ink-on-surface-middle">
-                                    木曾路はすべて山の中である。<br>
-                                    あるところは岨づたいに行く崖の道であり、あるところは数十間の深さに臨む木曾川の岸であり、あるところは山の尾をめぐる谷の入り口である。一筋の街道はこの深い森林地帯を貫いていた
-                                </p>
-                            </div>
-                        </AcdInjectedBody>
+                        <div class="card-body-container">
+                            <AcdInjectedBody>
+                                <div class="card-body">
+                                    <p class="typo-body-md typo-pre-line-break-word typo-line-clamp-3">
+                                        木曾路はすべて山の中である。<br>
+                                        あるところは岨づたいに行く崖の道であり、あるところは数十間の深さに臨む木曾川の岸であり、あるところは山の尾をめぐる谷の入り口である。一筋の街道はこの深い森林地帯を貫いていた
+                                    </p>
+                                </div>
+                            </AcdInjectedBody>
+                        </div>
                         <template v-if="args.isActionBar">
-                            <div class="card-action-bar">
+                            <div class="action-bar">
                                 <ButtonText
-                                    class-name="button-primary-transparent"
-                                    text="accept"
+                                    color-type="primary"
+                                    style-type="ghost"
+                                    text="Read"
                                 />
                                 <Spacer
                                     direction="right"
@@ -98,19 +101,18 @@ export const Default: StoryObj<Comp> = {
                                     size="auto"
                                 />
                                 <ButtonIcon
-                                    class-name="card-icon-button"
-                                    shape="share"
-                                    size="sm"
-                                />
-                                <Spacer
-                                    direction="right"
-                                    :is-inline="true"
-                                    size="25"
+                                    aria-label="シェア"
+                                    color-type="neutral"
+                                    style-type="ghost"
+                                    icon="share"
+                                    size="lg"
                                 />
                                 <ButtonIcon
-                                    class-name="card-icon-button"
-                                    shape="ellipsis-v"
-                                    size="sm"
+                                    aria-label="メニューを開く"
+                                    color-type="neutral"
+                                    style-type="ghost"
+                                    icon="more"
+                                    size="lg"
                                 />
                             </div>
                         </template>

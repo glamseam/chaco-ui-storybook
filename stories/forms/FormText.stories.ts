@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import { ref } from 'vue'
-import FormText from '@glamseam/chaco-ui/dist/components/forms/FormText.vue'
+import FormFieldText from '@glamseam/chaco-ui/dist/components/forms/FormFieldText.vue'
 
-type Comp = InstanceType<typeof FormText>
+type Comp = InstanceType<typeof FormFieldText>
 
 const meta: Meta<Comp> = {
     title: 'Form/Text',
-    component: FormText,
+    component: FormFieldText,
     argTypes: {
         inputmode: {
             control: { type: 'radio' },
@@ -23,20 +23,19 @@ export default meta
 export const Default: StoryObj<Comp> = {
     name: 'Text',
     args: {
-        classNameSuffix: 'main',
+        classNameSuffix: 'default',
         errorText: '',
-        iconLeft: '',
         inputmode: undefined,
         isDisabled: false,
         isRequired: false,
-        isTextarea: false,
         label: 'お名前',
+        leftIcon: '',
         maxLength: undefined,
         supportingText: '',
         type: 'text'
     },
     render: (args) => ({
-        components: { FormText },
+        components: { FormFieldText },
         setup() {
             const valueRef = ref('')
 
@@ -46,7 +45,7 @@ export const Default: StoryObj<Comp> = {
             }
         },
         template: `
-            <FormText
+            <FormFieldText
                 v-bind="args"
                 :value="valueRef"
                 @update:value="(v) => valueRef = v"

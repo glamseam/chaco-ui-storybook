@@ -22,9 +22,8 @@ export default meta
 export const Default: StoryObj<Comp> = {
     name: 'Bar',
     args: {
-        fillClassNameSuffix: 'main',
+        colorName: 'primary',
         height: 4,
-        isRounded: false,
         value: 23,
         withTrack: false
     },

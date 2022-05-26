@@ -22,7 +22,7 @@ export default meta
 export const Default: StoryObj<Comp> = {
     name: 'Circle',
     args: {
-        fillClassNameSuffix: 'main',
+        colorName: 'secondary',
         stroke: 12,
         value: 23,
         width: 128,

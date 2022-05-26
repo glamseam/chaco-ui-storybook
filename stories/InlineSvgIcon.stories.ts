@@ -12,10 +12,10 @@ export default meta
 export const Default: StoryObj<Comp> = {
     name: 'InlineSvg',
     args: {
-        className: 'icon-size',
+        className: '',
         label: '',
         roleName: '',
-        symbolId: 'svg-icon-bell',
+        symbolId: 'svg-icon-brand-spotify',
         viewBox: '0 0 24 24',
         withTitle: false
     },
@@ -24,6 +24,14 @@ export const Default: StoryObj<Comp> = {
         setup() {
             return { args }
         },
-        template: '<InlineSvg v-bind="args" />'
+        template: `
+            <InlineSvg
+                v-bind="args"
+                :style="{
+                    width: '24px',
+                    height: '24px'
+                }"
+            />
+        `
     })
 }

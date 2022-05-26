@@ -26,9 +26,9 @@ const config: StorybookConfig = {
                     { loader: 'css-loader' },
                     {
                         loader: 'sass-loader',
-                        options: {
-                            additionalData: `@use '@scss/override-variables';`
-                        }
+                        // options: {
+                        //     additionalData: `@use '@scss/override-variables';`
+                        // }
                     }
                 ]
             })

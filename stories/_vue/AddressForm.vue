@@ -1,8 +1,8 @@
 <template>
     <form>
-        <FormText
+        <FormFieldText
             v-model:value="addressRef.zipcode"
-            class-name-suffix="main"
+            class-name-suffix="default"
             :is-required="true"
             label="郵便番号"
             :max-length="7"
@@ -11,16 +11,15 @@
         />
         <div class="form-spacer" />
         <RepeatGrid
-            gap="var(--grid-form-gap)"
+            gap="var(--grid-gap-form)"
             item-min-width="320px"
             tag="div"
         >
-            <FormSelect
+            <FormFieldSelect
                 v-model:value="addressRef.prefecture"
-                class-name-suffix="main"
+                class-name-suffix="default"
                 :is-required="true"
                 label="都道府県"
-                supporting-text="ヘルパーテキスト"
             >
                 <option value="">
                     選択してください
@@ -32,18 +31,18 @@
                 >
                     {{ prefecture.prefecture_name }}
                 </option>
-            </FormSelect>
-            <FormText
+            </FormFieldSelect>
+            <FormFieldText
                 v-model:value="addressRef.city"
-                class-name-suffix="main"
+                class-name-suffix="default"
                 :is-required="true"
                 label="市町村"
             />
         </RepeatGrid>
         <div class="form-spacer" />
-        <FormText
+        <FormFieldText
             v-model:value="addressRef.town"
-            class-name-suffix="main"
+            class-name-suffix="default"
             :is-required="true"
             label="地名・番地"
             :max-length="128"
@@ -55,8 +54,8 @@
 
 <script lang="ts" setup>
 import { useZipcodeJp, PREFECTURES } from '@d-gs/zipcode-jp-api/dist/useZipcodeJpForVue'
-import FormSelect from '@glamseam/chaco-ui/dist/components/forms/FormSelect.vue'
-import FormText from '@glamseam/chaco-ui/dist/components/forms/FormText.vue'
+import FormFieldSelect from '@glamseam/chaco-ui/dist/components/forms/FormFieldSelect.vue'
+import FormFieldText from '@glamseam/chaco-ui/dist/components/forms/FormFieldText.vue'
 import RepeatGrid from '@glamseam/chaco-ui/dist/components/RepeatGrid.vue'
 const { addressRef } = useZipcodeJp('https://zipcode-jp-k9dsua.web.app')
 </script>

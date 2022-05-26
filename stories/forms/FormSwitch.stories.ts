@@ -13,7 +13,7 @@ export default meta
 export const Default: StoryObj<Comp> = {
     name: 'Switch',
     args: {
-        classNameSuffix: 'main',
+        classNameSuffix: 'default',
         inputName: 'switch',
         isDisabled: false,
         leftIcon: 'moon',

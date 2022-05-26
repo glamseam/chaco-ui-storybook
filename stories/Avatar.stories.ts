@@ -10,12 +10,8 @@ const meta: Meta<Comp> = {
         badgeColorClassName: {
             control: { type: 'radio' },
             options: [
-                'primary-on-surface-high',
-                'secondary-on-surface-high',
-                'tertiary-on-surface-high',
-                'success-on-surface-high',
-                'caution-on-surface-high',
-                'danger-on-surface-high'
+                'theme-surface-primary',
+                'theme-surface-secondary'
             ]
         },
         badgePosition: {
@@ -33,12 +29,12 @@ export default meta
 export const Default: StoryObj<Comp> = {
     name: 'Default',
     args: {
-        badgeColorClassName: 'primary-on-surface-high',
+        badgeColorClassName: 'theme-surface-primary',
         badgePosition: 'bottom',
         badgeSize: 10,
         imgSrc: 'https://avatars.githubusercontent.com/u/25496839',
         imgSize: 40,
-        imgInnerStrokeWidth: 2,
+        imgOutlineWidth: 2,
         maskIdName: 'maskIdName'
     },
     render: (args) => ({

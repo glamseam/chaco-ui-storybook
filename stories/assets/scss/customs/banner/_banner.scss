@@ -1,8 +1,0 @@
-@use '@glamseam/sparrow/bases/theme';
-@use '@glamseam/sparrow/components/banner';
-
-@include banner.output(
-    'main',
-    theme.$surface-light,
-    theme.$surface-dark
-);
