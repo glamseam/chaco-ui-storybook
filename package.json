@@ -1,6 +1,6 @@
 {
     "name": "@d-gs/chaco-ui-storybook",
-    "version": "4.0.0-beta.11",
+    "version": "4.0.0-beta.15",
     "description": "Chaco UI Library Storybook.",
     "main": "storybook-static/index.html",
     "author": "__d",
@@ -27,7 +27,7 @@
         "@d-gs/eslint-config-for-vue": "^0.3.5",
         "@d-gs/stylelint-config": "^0.7.0",
         "@d-gs/zipcode-jp-api": "^0.1.3",
-        "@glamseam/chaco-ui": "^4.0.0-beta.11",
+        "@glamseam/chaco-ui": "^4.0.0-beta.15",
         "@storybook/addon-essentials": "^6.5.5",
         "@storybook/addon-links": "^6.5.5",
         "@storybook/builder-webpack5": "^6.5.5",
