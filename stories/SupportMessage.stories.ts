@@ -32,8 +32,7 @@ export const Default: StoryObj<Comp> = {
                 <SupportMessage v-bind="args">
                     <template #eyecatch>
                         <Imgix
-                            alt-text="thought"
-                            :aspectRatio="{
+                            :aspect-ratio="{
                                 horizontal: 1,
                                 vertical: 1
                             }"
@@ -46,8 +45,11 @@ export const Default: StoryObj<Comp> = {
                     </template>
                     <template #default>
                         <ButtonText
-                            class-name="button-primary"
+                            color-type="primary"
+                            left-icon="add"
+                            style-type="filled"
                             text="コンテンツを追加"
+                            size="md"
                         />
                     </template>
                 </SupportMessage>

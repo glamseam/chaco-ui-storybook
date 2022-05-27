@@ -39,10 +39,10 @@ export const Default: StoryObj<Comp> = {
             >
                 <template #default="slotProps">
                     <ButtonText
-                        class-name="button-primary"
+                        color-type="secondary"
                         :for-name="slotProps.inputId"
-                        :is-rounded-pill="true"
-                        left-icon="cloud-upload"
+                        left-icon="add"
+                        style-type="filled"
                         text="画像をアップロード"
                     />
                 </template>
