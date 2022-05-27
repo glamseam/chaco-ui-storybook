@@ -1,4 +1,7 @@
+@use 'sass:map';
+@use '@glamseam/sparrow/design-token' as dt;
 @use '@glamseam/sparrow/components/alert';
+@use '@glamseam/sparrow/components/badge';
 @use '@glamseam/sparrow/components/banner';
 @use '@glamseam/sparrow/components/bottom-bar';
 @use '@glamseam/sparrow/components/button';
@@ -9,11 +12,15 @@
 @use '@glamseam/sparrow/components/images-list';
 @use '@glamseam/sparrow/components/loading-placeholder';
 @use '@glamseam/sparrow/components/loading-spinner';
+@use '@glamseam/sparrow/components/nav-drawer';
 @use '@glamseam/sparrow/components/progress';
 @use '@glamseam/sparrow/components/ripple';
 @use '@glamseam/sparrow/components/searchbox';
 @use '@glamseam/sparrow/components/snackbar';
 @use '@glamseam/sparrow/components/top-app-bar';
+@use '@glamseam/sparrow/components/mixins' as m;
 
 @include dt-picker.output('default');
 @include searchbox.output('default');
+@include m.create-badge-color('generic', map.get(dt.$component-map, 'badge', 'color', 'generic'), (background-color));
+@include m.create-badge-color('avatar', map.get(dt.$component-map, 'badge', 'color', 'generic'), (fill));

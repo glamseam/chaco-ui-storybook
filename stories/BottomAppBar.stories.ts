@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import BottomAppBar from '@glamseam/chaco-ui/dist/components/BottomAppBar.vue'
-import ButtonNav from '@glamseam/chaco-ui/dist/components/buttons/ButtonNav.vue'
+import ButtonNavWithUnderText from '@glamseam/chaco-ui/dist/components/buttons/ButtonNavWithUnderText.vue'
 
 type Comp = InstanceType<typeof BottomAppBar>
 
@@ -32,7 +32,7 @@ export const Default: StoryObj<Comp> = {
     render: (args) => ({
         components: {
             BottomAppBar,
-            ButtonNav
+            ButtonNavWithUnderText
         },
         setup() {
             return { args }
@@ -40,7 +40,7 @@ export const Default: StoryObj<Comp> = {
         template: `
             <BottomAppBar v-bind="args">
                 <template #default="slotProps">
-                    <ButtonNav
+                    <ButtonNavWithUnderText
                         :class-name="slotProps.navButtonClass"
                         color-type="secondary"
                         icon="notification"
@@ -48,7 +48,7 @@ export const Default: StoryObj<Comp> = {
                         :is-disabled="args.isDisabled"
                         :text="args.helperText"
                     />
-                    <ButtonNav
+                    <ButtonNavWithUnderText
                         :class-name="slotProps.navButtonClass"
                         color-type="secondary"
                         icon="camera"
@@ -56,7 +56,7 @@ export const Default: StoryObj<Comp> = {
                         :is-disabled="args.isDisabled"
                         text="Camera"
                     />
-                    <ButtonNav
+                    <ButtonNavWithUnderText
                         :class-name="slotProps.navButtonClass"
                         color-type="secondary"
                         icon="car"
@@ -64,7 +64,7 @@ export const Default: StoryObj<Comp> = {
                         :is-disabled="args.isDisabled"
                         text="Drive"
                     />
-                    <ButtonNav
+                    <ButtonNavWithUnderText
                         :class-name="slotProps.navButtonClass"
                         color-type="secondary"
                         icon="shop"

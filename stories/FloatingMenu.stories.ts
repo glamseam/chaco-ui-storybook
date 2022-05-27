@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import FloatingMenu from '@glamseam/chaco-ui/dist/components/FloatingMenu.vue'
 import ButtonIcon from '@glamseam/chaco-ui/dist/components/buttons/ButtonIcon.vue'
-import ButtonList from '@glamseam/chaco-ui/dist/components/buttons/ButtonList.vue'
+import ButtonNav from '@glamseam/chaco-ui/dist/components/buttons/ButtonNav.vue'
 
 type Comp = InstanceType<typeof FloatingMenu>
 
@@ -17,7 +17,7 @@ export const Default: StoryObj<Comp> = {
         components: {
             FloatingMenu,
             ButtonIcon,
-            ButtonList
+            ButtonNav
         },
         template: `
             <FloatingMenu>
@@ -31,33 +31,29 @@ export const Default: StoryObj<Comp> = {
                         @click="slotProps.open"
                     />
                 </template>
-                <ButtonList
+                <ButtonNav
                     color-type="neutral"
-                    style-type="ghost"
                     icon="brand-twitter"
                     size="xl"
                     text="Twitter"
                     :is-border-radius-none="true"
                 />
-                <ButtonList
+                <ButtonNav
                     color-type="neutral"
-                    style-type="ghost"
                     icon="brand-facebook"
                     size="xl"
                     text="Meta facebook"
                     :is-border-radius-none="true"
                 />
-                <ButtonList
+                <ButtonNav
                     color-type="neutral"
-                    style-type="ghost"
                     icon="brand-instagram"
                     size="xl"
                     text="Instagram"
                     :is-border-radius-none="true"
                 />
-                <ButtonList
+                <ButtonNav
                     color-type="neutral"
-                    style-type="ghost"
                     icon="brand-google"
                     size="xl"
                     text="Alphabet Google"

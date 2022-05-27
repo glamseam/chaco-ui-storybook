@@ -10,8 +10,9 @@ const meta: Meta<Comp> = {
         badgeColorClassName: {
             control: { type: 'radio' },
             options: [
-                'theme-surface-primary',
-                'theme-surface-secondary'
+                'badge-avatar-default',
+                'badge-avatar-notification',
+                'badge-avatar-danger'
             ]
         },
         badgePosition: {
@@ -29,7 +30,7 @@ export default meta
 export const Default: StoryObj<Comp> = {
     name: 'Default',
     args: {
-        badgeColorClassName: 'theme-surface-primary',
+        badgeColorClassName: 'badge-avatar-default',
         badgePosition: 'bottom',
         badgeSize: 10,
         imgSrc: 'https://avatars.githubusercontent.com/u/25496839',
