@@ -7,7 +7,6 @@ import type { ArgTypes, Story, StoryContext } from '@storybook/vue3'
 import pluginChacoUI from '@glamseam/chaco-ui'
 import type { PluginInstallOptionsI } from '@glamseam/chaco-ui/dist/type'
 
-import { PAYJP_PUBLIC_KEY } from '../env'
 import StoriesWrapper from '../stories/decorators/StoriesWrapper.vue'
 import SvgSprite from '../stories/decorators/SvgSprite.vue'
 
@@ -16,7 +15,6 @@ import '../stories/assets/scss/style.scss'
 // chaco-ui main
 const pluginChacoUIOptions: PluginInstallOptionsI = {
     imgixBaseUrl: 'https://chaco.imgix.net',
-    payjpPublicKey: PAYJP_PUBLIC_KEY,
     svgIconSymbolIdPrefix: 'svg-icon-'
 }
 app.use(
