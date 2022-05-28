@@ -32,28 +32,28 @@ export const Default: StoryObj<Comp> = {
                     />
                 </template>
                 <ButtonNav
-                    color-type="neutral"
+                    color-type="secondary"
                     icon="brand-twitter"
                     size="xl"
                     text="Twitter"
                     :is-border-radius-none="true"
                 />
                 <ButtonNav
-                    color-type="neutral"
+                    color-type="secondary"
                     icon="brand-facebook"
                     size="xl"
                     text="Meta facebook"
                     :is-border-radius-none="true"
                 />
                 <ButtonNav
-                    color-type="neutral"
+                    color-type="secondary"
                     icon="brand-instagram"
                     size="xl"
                     text="Instagram"
                     :is-border-radius-none="true"
                 />
                 <ButtonNav
-                    color-type="neutral"
+                    color-type="secondary"
                     icon="brand-google"
                     size="xl"
                     text="Alphabet Google"
