@@ -52,6 +52,7 @@ export const Default: StoryObj<Comp> = {
                     <ButtonText
                         color-type="neutral"
                         style-type="ghost"
+                        :is-text-underline="true"
                         size="sm"
                         text="拒否"
                     />
