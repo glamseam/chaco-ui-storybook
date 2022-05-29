@@ -26,7 +26,7 @@ export const Default: StoryObj<Comp> = {
         isDisabled: false,
         isRequired: false,
         label: 'フロントエンド',
-        leftIcon: '',
+        icon: '',
         supportingText: ''
     },
     render: (args) => ({

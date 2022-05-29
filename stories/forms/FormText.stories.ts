@@ -29,7 +29,7 @@ export const Default: StoryObj<Comp> = {
         isDisabled: false,
         isRequired: false,
         label: 'お名前',
-        leftIcon: '',
+        icon: 'building',
         maxLength: undefined,
         supportingText: '',
         type: 'text'
