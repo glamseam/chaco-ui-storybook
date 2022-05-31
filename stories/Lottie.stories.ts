@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import Lottie from '@glamseam/chaco-ui/dist/components/Lottie.vue'
-import LottieLikeButton from '@assets/lottie-json/38920-like-button.json'
+import LottieLikeButton from '@assets/data/lottie-json/38920-like-button.json'
 
 type Comp = InstanceType<typeof Lottie>
 
