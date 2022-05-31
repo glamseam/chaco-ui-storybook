@@ -21,8 +21,8 @@ import Spacer from '@glamseam/chaco-ui/dist/components/spacers/Spacer.vue'
 </script>
 
 <style lang="scss">
-@use '@glamseam/sparrow/design-token' as dt;
-@use '@glamseam/sparrow/layouts/breakpoints';
+@use '@glamseam/sparrow/scss/design-token' as dt;
+@use '@glamseam/sparrow/scss/layouts/breakpoints';
 
 .loading-placeholder-header-logo {
     flex-shrink: 0;

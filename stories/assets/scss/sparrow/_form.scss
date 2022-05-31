@@ -1,10 +1,10 @@
-@use '@glamseam/sparrow/forms/base';  // Required when use form
-@use '@glamseam/sparrow/forms/checkbox-radio';
-@use '@glamseam/sparrow/forms/checkbox-radio-title';
-@use '@glamseam/sparrow/forms/field';
-@use '@glamseam/sparrow/forms/filter-chip';
-@use '@glamseam/sparrow/forms/image-select';
-@use '@glamseam/sparrow/forms/switch';
+@use '@glamseam/sparrow/scss/forms/base';  // Required when use form
+@use '@glamseam/sparrow/scss/forms/checkbox-radio';
+@use '@glamseam/sparrow/scss/forms/checkbox-radio-title';
+@use '@glamseam/sparrow/scss/forms/field';
+@use '@glamseam/sparrow/scss/forms/filter-chip';
+@use '@glamseam/sparrow/scss/forms/image-select';
+@use '@glamseam/sparrow/scss/forms/switch';
 
 @include checkbox-radio.output('default');
 @include checkbox-radio-title.output('default');
